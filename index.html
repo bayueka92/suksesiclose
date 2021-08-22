@@ -8,11 +8,24 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <!-- Bootstrap CSS -->
     <link href="bs5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/responsive.css">
 
     <title>E-Voting | Closed</title>
+    <style>
+		#headerPopup{
+			width:75%;
+			margin:0 auto;
+		}
+
+		#headerPopup iframe{
+			width:100%;
+			margin:0 auto;
+		}
+	</style>
 </head>
 
 <body>
@@ -85,8 +98,10 @@
                 </div>
 
                 <div class="mt-5">
-                    <a href="https://youtu.be/2DOmKVTmRmA" class="button rounded-pill shadow tebel-sedang">Tutorial</a>
-                    &nbsp;
+                    <a href="#headerPopup" id="headerVideoLink" target="_blank" class="button rounded-pill shadow tebel-sedang">Tutorial</a>
+                    <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="815" src="https://www.youtube.com/embed/e9MnynoM4xg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                    </div>
                     <!-- <a href="assets/kpu.png" class="button-2 rounded-pill shadow tebel-sedang">Alur</a> -->
                 </div>
 
@@ -104,9 +119,21 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="bs5/dist/js/bootstrap.bundle.js"></script>
     <script src="js/onscroll.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
     <div>
         <h6 style="text-align: center;"><font color="green">Crafted By</font> <a><font color="#e16a00"> Suksesi Hima Telkom 2021</font></a></h6>
     </div>
+    <script>
+        $( document ).ready(function() {
+            $('#headerVideoLink').magnificPopup({
+            type:'inline',
+            midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+            });
+        });
+    
+    </script>
 </body>
 
 </html>
